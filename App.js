@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react"
+import ImageInputList from "./app/components/ImageInput/ImageInputList";
+
+import Screen from './app/components/Screen';
+import ListEditScreen from "./app/screen/ListEditScreen";
+
+
+//safeAreaView is only works in IOS so for android we must use padding
+// so we use Platform in this case.
+
+
+
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ListEditScreen />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
